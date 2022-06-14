@@ -1,0 +1,139 @@
+* {
+    margin: 0;
+
+}
+
+html {
+    height: 100%;
+}
+
+
+body {
+    height: 100%;
+    background-color: aquamarine;
+}
+
+/* .container {
+    height: 100%;
+    background-color: brown;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+
+} */
+.container {
+    height: 100%;
+    background-color: brown;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+    perspective: 100px;
+
+}
+
+.box {
+    height: 100px;
+    width: 100px;
+    background-color: gold;
+    transition: all 1s ease;
+    transform-origin: top left;
+}
+
+.box:hover {
+    /* transform: translate(-50px, -50px); */
+    /* transform: rotateX(50deg); */
+    /* transform: scale(.5); */
+    /* transform: skew(-30deg, -20deg); */
+    /* transform: translate3d(20px, 20px, 20px); */
+    transform: rotate3d(0, 1, 1, 30deg);
+}
+
+.x {
+    width: 100%;
+    height: 1px;
+    position: absolute;
+    background-color: black;
+    top: 27%;
+}
+
+.y {
+    width: 1px;
+    height: 100%;
+    position: absolute;
+    background-color: black;
+    left: 50%;
+    top: 0;
+}
+
+.text:hover {
+    color: aquamarine;
+}
+
+.button:disabled {
+    color: rgb(234, 74, 16);
+    background-color: black;
+    cursor: not-allowed;
+}
+
+h1 {
+    top: 50px;
+    left: 50px;
+
+}
+
+.input:focus {
+    border: none;
+    outline: none;
+    padding: 10px;
+}
+
+.list-item:first-child {
+    color: aqua;
+    font-size: 20px;
+
+}
+
+.list-item:last-child {
+    color: rgb(0, 255, 30);
+    font-size: 25px;
+
+}
+
+.list-item:nth-child(2) {
+    color: rgb(232, 202, 29);
+    font-size: 23px;
+}
+
+.text {
+    color: white;
+}
+
+.text::before {
+    content: "add before";
+    color: aquamarine;
+    font-size: 30px;
+    padding-right: 10px;
+}
+
+.text::after {
+    content: "add After";
+    color: rgb(5, 125, 85);
+    font-size: 40px;
+    padding-left: 10px;
+}
+
+.text-2 {
+    color: white;
+    font-size: 100px;
+    font-weight: bold;
+    position: relative;
+}
+
+.text-2::before {
+    content: "Text";
+    color: aqua;
+    position: absolute;
+    left: -10px;
+}

@@ -1,0 +1,302 @@
+* {
+    margin: 0
+}
+
+html,
+body {
+    height: 100%;
+    background-color: skyblue;
+    font-family: 'Roboto', sans-serif;
+    cursor: pointer;
+}
+
+.continer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.header {
+    text-align: center;
+    padding-top: 10px;
+    border: 1px solid#333;
+    margin-top: 10px;
+}
+
+.item {
+    padding: 10px;
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* justifi content center works only position select relative in and main position select absolute */
+/* check example .button1 and .circle */
+
+/* ============================
+Sample 1 style css
+============================ */
+.button1 {
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+}
+
+img {
+    width: 50%;
+    height: 50%;
+
+}
+
+.circle {
+
+    width: 70%;
+    height: 70%;
+    border-radius: 50%;
+    position: absolute;
+    opacity: 0;
+}
+
+.circle-1 {
+    border: 1px solid rgb(158, 158, 253);
+    transition: opacity 1s ease;
+}
+
+.circle-2 {
+    width: 80%;
+    height: 80%;
+    border: 1.5px solid rgb(105, 105, 253);
+    transition: opacity 1s 0.2s ease;
+}
+
+.circle-3 {
+    border: 3px dashed tomato;
+    transition: transform 1s ease, opacity 0.5s ease;
+
+}
+
+.facebook:hover .circle-1,
+.facebook:hover .circle-2 {
+    opacity: 1;
+}
+
+.instogram:hover .circle-3 {
+    opacity: 1;
+    transform: rotate(360deg);
+}
+
+.twitter {
+    transition: all 1s ease-out;
+}
+
+.twitter:hover {
+    transform: rotate(360deg);
+}
+
+/* ============================
+Sample 2 style css
+============================ */
+.button {
+    width: 50px;
+    height: 50px;
+    border: 2px solid #333;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    position: relative;
+    margin: 10px;
+    overflow: hidden;
+}
+
+.fill {
+    width: 120%;
+    height: 120%;
+    background-color: #333;
+    border-radius: 40%;
+    position: absolute;
+    bottom: -50px;
+    left: -50px;
+    transition: all 1s ease;
+}
+
+.icon {
+    z-index: 2;
+}
+
+.button:hover .fill {
+    transform: translate(43px, -45px);
+}
+
+.button:hover .icon {
+    color: white;
+}
+
+.item2 {
+    padding: 70px;
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: rotate(-25deg)skew(25deg);
+}
+
+/* ============================
+Sample 3 style css
+============================ */
+.button_2 {
+    width: 60px;
+    height: 60px;
+    /* background-color: black; */
+    margin: 20px;
+    position: relative;
+    color: white;
+}
+
+.button_2::before {
+    content: "";
+    width: 100%;
+    height: 10px;
+    background-color: #333;
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    transform: skewX(-45deg);
+    transform-origin: top;
+}
+
+.button_2::after {
+    content: "";
+    width: 10px;
+    height: 100%;
+    background-color: #333;
+    position: absolute;
+    transform: skewY(-45deg);
+    left: -10px;
+    top: 0;
+    transform-origin: right;
+}
+
+span {
+    width: 100%;
+    height: 100%;
+    background-color: #333;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    transition: all 1s ease-out;
+    border: .5px solid rgb(103, 96, 96, 0.5);
+}
+
+.button_2:hover span:nth-child(5) {
+    transform: translate(40px, -40px);
+}
+
+.button_2:hover span:nth-child(4) {
+    transform: translate(30px, -30px);
+    opacity: 0.8;
+}
+
+.button_2:hover span:nth-child(3) {
+    transform: translate(20px, -20px);
+    opacity: 0.6;
+}
+
+.button_2:hover span:nth-child(2) {
+    transform: translate(10px, -10px);
+    opacity: 0.4;
+}
+
+.button_2:hover span:nth-child(1) {
+    transform: translate(0px, -0px);
+    opacity: 0.2;
+}
+
+.button_2:nth-child(1):hover span {
+    background-color: royalblue;
+}
+
+.button_2:nth-child(2):hover span {
+    background-color: tomato;
+}
+
+.button_2:nth-child(3):hover span {
+    background-color: dodgerblue;
+}
+
+.button_2:nth-child(4):hover span {
+    background-color: red;
+}
+
+/* ============================
+Sample 4 style css
+============================ */
+.sample1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(10, 93, 126);
+    width: 120px;
+    height: 50px;
+    color: white;
+    position: relative;
+    overflow: hidden;
+}
+
+.button_3 {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.icones_sample {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    bottom: -50px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.text {
+    transition: all 0.2s ease-in;
+}
+
+.share {
+    transition: all 0.2s ease-in;
+}
+
+.sample1:hover .text,
+.sample1:hover .share,
+.sample1:hover .pic {
+    transform: translateY(-50px);
+}
+
+.pic:nth-child(1) {
+    transition: all 0.4s ease-in;
+}
+
+.pic:nth-child(2) {
+    transition: all 0.5s ease-in;
+}
+
+.pic:nth-child(3) {
+    transition: all 0.6s ease-in;
+}
+
+/* ============================
+Sample 5 style css
+============================ */
