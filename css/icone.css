@@ -10,7 +10,7 @@ body {
     cursor: pointer;
 }
 
-.continer {
+.container {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -183,7 +183,7 @@ Sample 3 style css
     transform-origin: right;
 }
 
-span {
+.sample_3 {
     width: 100%;
     height: 100%;
     background-color: #333;
@@ -300,3 +300,93 @@ Sample 4 style css
 /* ============================
 Sample 5 style css
 ============================ */
+.sample_5 {
+    width: 60px;
+    height: 60px;
+    position: relative;
+    margin-top: 80px;
+    margin-bottom: 80px;
+
+}
+
+.main_icon {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    font-size: 50px;
+    color: skyblue;
+    transition: all 0.3s ease-in-out;
+}
+
+.button_5 {
+    width: 30px;
+    height: 30px;
+    background-color: slateblue;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    position: absolute;
+    transition: all 0.5s ease-in-out;
+}
+
+.button_5:nth-child(1) {
+    top: 0;
+    left: 0;
+    border-radius: 10px 0 0 0;
+}
+
+.button_5:nth-child(2) {
+    top: 0;
+    right: 0;
+    border-radius: 0 10px 0 0;
+}
+
+.button_5:nth-child(3) {
+    bottom: 0;
+    left: 0;
+    border-radius: 0 0 0 10px;
+}
+
+.button_5:nth-child(4) {
+    bottom: 0;
+    right: 0;
+    border-radius: 0 0 10px 0;
+}
+
+.icon_sm {
+    opacity: 0;
+}
+
+.sample_5:hover .icon_sm {
+    opacity: 1;
+}
+
+.sample_5:hover .main_icon {
+    transform: scale(4) rotate(41deg);
+}
+
+.sample_5:hover .button_5 {
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+}
+
+.sample_5:hover .button_5:nth-child(1) {
+    transform: translate(5px, -50px);
+}
+
+.sample_5:hover .button_5:nth-child(2) {
+    transform: translate(50px, 5px);
+}
+
+.sample_5:hover .button_5:nth-child(3) {
+    transform: translate(-50px, 5px);
+}
+
+.sample_5:hover .button_5:nth-child(4) {
+    transform: translate(-5px, 50px);
+}
